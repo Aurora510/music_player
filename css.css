@@ -1,0 +1,265 @@
+*{padding:0; margin:0; border:0;}
+/**/
+@font-face{
+	font-family: MD;
+	src:url(font/MD.ttf);
+}
+@font-face{
+	font-family: '文艺黑体';
+	src:url(font/文艺黑体.ttf);
+}
+#musicDiv{
+	width:100%;
+	height:100%;
+	position: absolute;
+	overflow: hidden;
+}
+video{
+	min-width:100%;
+	min-height:100%;
+	max-width: 1000%;
+	max-height:1000%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -540px;
+	margin-left: -1350px;
+}
+/*CD*/
+.girl{
+	width:422px;
+	height:422px;
+	background:url(images/girl.jpg) no-repeat;
+	border:10px solid #fff;
+	border-radius: 422px;
+	box-shadow:5px 5px 20px 2px #000;
+	position:fixed;
+	top:50%;
+	left: 20%;
+	margin-top: -211px;
+	margin-left: -211px;
+	z-index:10;
+}
+.icon{
+	width:88px;
+	height:88px;
+	background: url(images/yinfu.gif) #000 no-repeat center;
+	border:6px solid #fff;
+	border-radius:88px;
+	/* position:absolute;
+	top:161px;
+	left:165px; */
+	margin:161px auto;
+	z-index: 100;
+}
+/*歌词*/
+.con{
+	position: fixed;
+	left: 46%;
+	width:46%;
+	height:100%;
+	z-index:100;
+	
+}
+.bgWord{
+	width:100%; 
+	position:absolute;
+	top:30%;
+	
+	transition:top 1s;
+}
+.bgWord h2{
+	font-family: MD;
+	font-size: 110px;
+	color:rgb(145, 56, 5);
+	transition:font-size 1s;
+}
+.con>.lrcWord{
+	position: relative;;
+	top:100%; 
+	width:100%;
+	height:80%;
+	background-color:rgba(255,255,255,0.5);
+	overflow: hidden;
+	transition:top 1s;
+}
+.lrcWord ul{
+    width:100%;
+    position:absolute;
+    top:50%;
+    transition: top 1s;
+}
+.con>.lrcWord li{
+	width:100%;
+	height:35px;
+	line-height: 35px;
+	text-align: center;
+	color:rgb(145, 56, 5);
+	font-family: '文艺黑体';
+	font-size: 20px;
+	transition:font-size .5s;
+}
+.con>.lrcWord li.active{
+	font-size: 26px; 
+	font-weight: bolder;
+}
+
+/*控制台样式*/
+@font-face {
+	font-family: 'iconfont';  /* project id 1607721 */
+	src: url('https://at.alicdn.com/t/font_1607721_4epx1iultj9.eot');
+	src: url('https://at.alicdn.com/t/font_1607721_4epx1iultj9.eot?#iefix') format('embedded-opentype'),
+	url('https://at.alicdn.com/t/font_1607721_4epx1iultj9.woff2') format('woff2'),
+	url('https://at.alicdn.com/t/font_1607721_4epx1iultj9.woff') format('woff'),
+	url('https://at.alicdn.com/t/font_1607721_4epx1iultj9.ttf') format('truetype'),
+	url('https://at.alicdn.com/t/font_1607721_4epx1iultj9.svg#iconfont') format('svg');
+  }
+.control{
+	position: fixed;
+	top:50%;
+	left:20%;
+	width:422px;
+	height:422px;
+	margin-top: -211px;
+	margin-left: -211px;
+	border-radius: 100%;
+	border:10px solid transparent;
+	background-color: rgba(0,0,0,0.5);
+	/* display:none; */
+	opacity: 0;
+	display: flex;
+	z-index: 11;
+}
+.control:hover{
+	opacity: 1;
+}
+.offset,.volume{
+	width:33%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border:1px solid transparent;
+}
+.play{
+	width:33%;
+	border:1px solid transparent;
+}
+
+.play .pause,.play .stop{
+	width:88px;
+	height:88px;
+	background-color:#fff;
+	text-align: center;
+	cursor: pointer;
+}
+.play .pause{
+	position: relative;
+	border-radius: 100%;
+	margin: 166px auto 0;
+	text-align: center;
+	line-height: 88px;
+}
+.play .stop{
+	margin:40px auto;
+}
+.offset span,.volume span{
+	font-family: 'iconfont'!important;
+	display: inline-block;
+	width:40px;
+	height:40px;
+	background-color: #fff;
+	border-radius: 5px;
+	font-size: 24px;
+	color:#bb6222;
+	text-align: center;
+	line-height: 40px;
+	box-sizing:border-box;
+	cursor: pointer;
+}
+.offset span{
+	margin:0 10px 0 27px;
+}
+.offset h4,.volume h4{
+	width:20px;
+	height:128px;
+	color:#fff;
+	box-sizing: border-box;
+}
+.offset h4{
+	padding-top:20px;
+}
+.volume h4{
+	padding-top:40px;
+}
+.offset div,.volume div{
+	color:#fff;
+}
+.volume .noSound{
+	display: none;
+	color:#999;
+	padding-right: 2px;
+}
+.play span{
+	font-family: 'iconfont' !important;
+	display: inline-block;
+	font-size: 60px;
+	color:#bb6222;
+	width:88px;
+	height:88px;
+	border-radius: 100%;
+	box-sizing:border-box;
+}
+.play .pauseico{
+	display: none;
+	padding-left: 10px;
+}
+.play .stop{
+	font-family: iconfont !important;
+	font-size: 80px;
+	color:#bb6222;
+	border-radius: 100%;
+}
+
+/*提示框*/
+.tip{
+	position:fixed;
+	top:50%;
+	left:20%;
+	margin-top: 231px;
+	margin-left: -221px;
+	width:442px;
+	height:300px;
+}
+.tip .upico{
+	width:50px;
+	height:50px;
+	margin:0 auto;
+	background:url(./images/up.gif) no-repeat  bottom/70px 80px border-box;
+}
+.tip .tipCon{
+	width:200px;
+	padding:30px 10px 20px;
+	border-radius: 80%;
+	background-color: rgba(0,0,0,0.5);
+	color:#fff;
+	font-family: '文艺黑体';
+	font-size:18px;
+	text-align: center;
+	border:2px solid #fff;
+	margin:0px auto;
+	box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.6);
+}
+.tip .tipBtn{
+	width:60px;
+	height:30px;
+	background-color: rgba(0,0,0,0.5);
+	color: #fff;
+	font-family: '文艺黑体';
+	border-radius: 12px;
+	text-align: center;
+	line-height: 30px;
+	border:1px solid #fff;
+	cursor: pointer;
+	margin:10px auto;
+}

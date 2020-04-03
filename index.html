@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>音乐播放器-风吹麦浪</title>
+	<link rel="stylesheet" href="css.css">
+</head>
+<body>
+	<div id="musicDiv">
+		<video src="media/mailang.webm" autoplay loop>浏览器不支持video标签</video>
+		<div class="girl">
+			<div class="icon"></div>
+		</div>
+		<div class="con">
+			<div class="bgWord">
+				<h2>风中的麦浪，</h2>
+				<h2 style="text-indent: 2em;">是想你的样子</h2>
+			</div>
+			<div class="lrcWord">
+				<ul></ul>
+			</div>
+			<audio src="media/music.mp3" autoplay loop></audio>
+		</div>
+		<div class="control">
+			<div class="offset">
+				<div><span class="add">&#xe71d;</span>0.1</div>
+				<h4>调整歌词</h4>
+				<div><span class="reduction">&#xe60e;</span>0.1</div>
+			</div>
+			<div class="play">
+				<div class="pause"><span class="pauseico">&#xe603;</span><span class="playico">&#xe642;</span></div>
+				<div class="stop">&#xe6af;</div>
+			</div>
+			<div class="volume">
+				<div><span class="add">&#xe71d;</span></div>
+				<h4>音量</h4>
+				<div><span class="reduction">&#xe60e;</span><span class="noSound">&#xe635;</span></div>
+			</div>
+		</div>
+		<div class="tip">
+			<div class="upico"></div>
+			<div class="tipCon">把鼠标放上去，可以控制音乐</div>
+			<div class="tipBtn">知道了</div>
+		</div>
+	</div>
+	<script src="./media/lrc.js"></script>
+	<script src="./js.js"></script>
+	<script>
+		init({
+			el:document.getElementById('musicDiv'),
+			lrc:lrcData,
+		})
+	</script>
+</body>
+</html>
